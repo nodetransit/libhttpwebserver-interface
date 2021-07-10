@@ -2,5 +2,4 @@
 
 using namespace nt::http::interfaces;
 
-Request::~Request()
-{ }
+Request::~Request() noexcept = default;

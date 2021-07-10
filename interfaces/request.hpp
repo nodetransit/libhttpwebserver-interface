@@ -25,7 +25,7 @@ public:
 
 public:
     Request() = default;
-    virtual ~Request() = 0;
+    virtual ~Request() noexcept = 0;
 
 };
 

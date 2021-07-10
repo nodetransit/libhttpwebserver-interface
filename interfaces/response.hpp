@@ -17,7 +17,7 @@ public:
 
 public:
     Response() = default;
-    virtual ~Response() = 0;
+    virtual ~Response() noexcept = 0;
 
 };
 

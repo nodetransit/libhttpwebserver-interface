@@ -16,7 +16,7 @@ protected:
 
 public:
     const char*
-    what()
+    what() noexcept
     {
         return message.c_str();
     }

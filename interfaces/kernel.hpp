@@ -11,9 +11,9 @@ class Kernel
 {
 public:
     Kernel() = default;
-    virtual ~Kernel() = 0;
+    virtual ~Kernel() noexcept = 0;
 
-    Response* process(Request*);
+    virtual Response* process(Request*) = 0;
 };
 
 }}}

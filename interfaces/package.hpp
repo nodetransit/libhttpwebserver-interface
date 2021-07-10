@@ -7,7 +7,7 @@ class Package
 {
 public:
     Package() = default;
-    virtual ~Package() = 0;
+    virtual ~Package() noexcept = 0;
 };
 
 }}}

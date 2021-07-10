@@ -2,5 +2,4 @@
 
 using namespace nt::http::interfaces;
 
-Kernel::~Kernel()
-{ }
+Kernel::~Kernel() noexcept = default;
