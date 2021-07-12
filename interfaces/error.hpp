@@ -11,27 +11,23 @@ template<class E>
 class Error :
       public std::exception
 {
-protected:
-    std::string message;
-
 public:
     const char*
     what() noexcept
     {
-        return message.c_str();
+        stream.str();
     }
 
     template<typename Type>
     E& operator<<(const Type& value)
     {
-        std::stringstream stream;
-
         stream << value;
-
-        message += stream.str();
 
         return *dynamic_cast<E*>(this);
     }
+
+private:
+    std::stringstream stream;
 };
 
 }}
